@@ -6,3 +6,19 @@ spring:
     active: local
   application:
     name: reports
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+      enabled: 'true'
+    restart:
+      enabled: 'true'
+
+backend:
+  service:
+    account: 'http://account-service/accounts'
+    credit: 'http://credits/credits'
