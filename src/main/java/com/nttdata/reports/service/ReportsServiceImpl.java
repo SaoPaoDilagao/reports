@@ -43,7 +43,7 @@ public class ReportsServiceImpl implements ReportsService {
 					temp.setBalance(elem.getBalance());
 					
 					return Flux.just(temp);
-				});;
+				});
 		
 		
 		return Flux.merge(fluxFromCredits,fluxFromAccounts);
